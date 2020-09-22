@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import ValidationComponent from "./Person/ValidationComponent";
-import Char from "./Char/Char";
-import Person from "./Person/Person";
+import Person from "../components/Persons/Person/Person";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
@@ -13,7 +11,7 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: lightgreen;
+    background-color: ${props => props.alt ? 'salmon':'lightgreen' };
     color: black;
   }
 `;
