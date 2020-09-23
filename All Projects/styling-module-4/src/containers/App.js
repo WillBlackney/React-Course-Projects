@@ -3,6 +3,7 @@ import "./App.css";
 import Persons from "../components/Persons/Persons";
 import styled from "styled-components";
 import Cockpit from "../components/Cockpit/Cockpit";
+import WithClass from '../hoc/WithClass';
 
 const StyledButton = styled.button`
   background-color: ${(props) => (props.alt ? "red" : "green")};
@@ -76,14 +77,14 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <WithClass classes = {classes.app}>
         <Cockpit
           showPersons={this.state.showPersons}
           persons={this.state.persons}
           clicked={this.togglePersonsHandler}
         ></Cockpit>
         {persons}
-      </div>
+      </WithClass>
     );
   }
 }

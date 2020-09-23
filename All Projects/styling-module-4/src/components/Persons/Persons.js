@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Person from "./Person/Person";
+import Aux from '../../../hoc/Aux';
 
 class Persons extends Component {
 
@@ -8,6 +9,7 @@ class Persons extends Component {
   }
 
   render() {
+
     return this.props.persons.map((person, index) => {
       return (
         <Person
